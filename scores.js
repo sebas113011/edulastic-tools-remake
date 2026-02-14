@@ -30,7 +30,6 @@ function main() {
       alert(`Error: Status code ${this.status} recieved while trying to fetch the API.`);
       return;
     }
-    let report = JSON.parse(this.responseText);
     let wrong = report.result.testActivity.wrong;
     let total = report.result.questionActivities.length;
     let percent = (100*(total-wrong)/total).toFixed(2);
